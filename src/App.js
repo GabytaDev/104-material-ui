@@ -9,9 +9,9 @@ import CardMedia from '@mui/material/CardMedia';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import ShareIcon from '@mui/icons-material/Share';
 import BookmarkIcon from '@mui/icons-material/Bookmark';
+import Stack from '@mui/material/Stack';
 import Rating from '@mui/material/Rating';
-import StarIcon from '@mui/icons-material/Star';
-
+import Chip from '@mui/material/Chip';
 const App = () => {
   return (
     <div>
@@ -83,7 +83,7 @@ const App = () => {
         </Card>
       </Box>
 
-      <Box sx={{ width: 300, m: 2 }}>
+      <Box sx={{ width: 400, m: 2 }}>
         <Card>
           <CardMedia
             component="img"
@@ -95,13 +95,25 @@ const App = () => {
             <Typography gutterBottom variant="h5">
               Cafe Badilico
             </Typography>
-            {/* <Rating
-              name="read-only"
-             // value={0,5}
-              readOnly
-              precision={0.4}
-              emptyIcon={<StarIcon style={{ opacity: 0.55 }} fontSize="small" />}
-            /> */}
+            <Stack spacing={1}>
+              <Rating name="size-small" defaultValue={4.5} precision={0.5} size="small" />
+            </Stack>
+            <Typography sx={{ mb: 1.5 }}>
+              $ * Italian, cafe
+            </Typography>
+            <Typography variant="body2" color="text.secondary" >
+              Small plates, sadad & sandwiches an intimate setting whith 12 indoor seats plus patio seating.
+            </Typography>
+            <Typography sx={{ mb: 1.5 }}>
+              Tonigth´s availability
+            </Typography>
+            <Stack direction="row" spacing={1}>
+              <Chip label="5:30 PM" sx={{color: 'text.secondary'}}/>
+              <Chip label="7:30 PM" sx={{ bgcolor: 'secondary.main', color: "white" }}/>
+              <Chip label="8:00 PM" sx={{color: 'text.secondary'}}/>
+              <Chip label="9:00 PM" sx={{color: 'text.secondary'}}/>
+            </Stack>
+            <Button size="small" sx={{color: 'secondary.main'}}>Reserve</Button>
           </CardContent>
         </Card>
 
