@@ -83,7 +83,7 @@ const App = () => {
         </Card>
       </Box>
 
-      <Box sx={{ width: 400, m: 2 }}>
+      <Box sx={{ width: 350, m: 2 }}>
         <Card>
           <CardMedia
             component="img"
